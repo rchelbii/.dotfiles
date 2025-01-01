@@ -1,0 +1,24 @@
+return {
+  {
+    "stevearc/conform.nvim",
+    event = "BufWritePre", -- uncomment for format on save
+    opts = require "configs.conform",
+  },
+
+  -- {
+  --   "rust-lang/rust.vim",
+  --   ft = "rust",
+  --   init = function ()
+  --     vim.g.rustfmt_autosave = 1
+  --   end
+  -- },
+  -- Rust config
+
+  -- These are some examples, uncomment them if you want to see them work!
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
+  },
+}

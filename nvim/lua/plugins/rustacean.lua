@@ -1,0 +1,14 @@
+-- return {
+--   "mrcjkb/rustaceanvim",
+--   version = "^5",
+--   lazy = false,
+--   ft = { "rust" },
+--   ["rust-analyzer"] = {
+--     cargo = {
+--       allFeatures = true
+--     }
+--   }
+--
+-- }
+--
+return {}
