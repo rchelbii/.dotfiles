@@ -7,6 +7,7 @@ return {
       "prettier",
       "tailwindcss-language-server",
       "typescript-language-server",
+      "asm-lsp",
     },
   },
 }

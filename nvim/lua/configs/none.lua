@@ -6,12 +6,16 @@ local opts = {
     -- js
     null_ls.builtins.formatting.prettier,
 
+    -- tailwindcss
+    null_ls.builtins.formatting.rustywind,
+
     -- golang
     null_ls.builtins.formatting.gofumpt,
     null_ls.builtins.formatting.goimports_reviser,
     null_ls.builtins.formatting.golines,
 
     -- rust
+    -- null_ls.builtins.diagnostics.ltrs,
 
     -- lua
     null_ls.builtins.formatting.stylua,
