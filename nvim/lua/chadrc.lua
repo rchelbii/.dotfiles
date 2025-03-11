@@ -19,8 +19,9 @@ M.ui = {
     separator_style = "block",
   },
   tabufline = {
-    enabled = true,
-    order = { "tabs", "buffers" },
+    enabled = false,
+
+    -- order = { "tabs", "buffers" },
   },
 }
 

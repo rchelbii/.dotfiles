@@ -43,7 +43,7 @@ vim.diagnostic.config {
 
 -- custom init configs
 --
-require "custom.default-nvdash"
+-- require "custom.default-nvdash"
 
 -- if vim.lsp.inlay_hint then
 --   vim.lsp.inlay_hint.enable(true, { 0 })
@@ -80,17 +80,29 @@ vim.g.zig_fmt_autosave = true
 --
 --
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   pattern = "*",
+--   callback = function()
+--     -- This makes the cursor's foreground inherit the underlying text color
+--     -- while setting its background to a color of your choosing (here, using colors from Catppuccin).
+--     vim.api.nvim_set_hl(0, "Cursor", { fg = "NONE", bg = "#e1e1e1" })
+--   end,
+-- })
+--
+-- -- set cursor
+-- vim.opt.guicursor = "n-v-c:block-Cursor"
+-- vim.opt.guicursor:append "i:ver100-iCursor"
+-- vim.opt.guicursor:append "n-v-c:blinkon0"
+-- vim.opt.guicursor:append "i:blinkwait10"
+--
+--
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
   callback = function()
-    -- This makes the cursor's foreground inherit the underlying text color
-    -- while setting its background to a color of your choosing (here, using colors from Catppuccin).
-    vim.api.nvim_set_hl(0, "Cursor", { fg = "NONE", bg = "#e1e1e1" })
+    vim.opt_local.tabstop = 4       -- A tab character is 4 spaces wide
+    vim.opt_local.shiftwidth = 4    -- Indentation uses 4 spaces per level
+    vim.opt_local.softtabstop = 4   -- Makes <Tab> and <BS> work consistently
+    vim.opt_local.expandtab = false -- Use actual tab characters instead of spaces
   end,
 })
-
--- set cursor
-vim.opt.guicursor = "n-v-c:block-Cursor"
-vim.opt.guicursor:append "i:ver100-iCursor"
-vim.opt.guicursor:append "n-v-c:blinkon0"
-vim.opt.guicursor:append "i:blinkwait10"

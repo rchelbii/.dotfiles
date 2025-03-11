@@ -6,6 +6,7 @@ local lspconfig = require "lspconfig"
 -- EXAMPLE
 local servers =
 { "rust_analyzer", "zls", "pyright", "html", "cssls", "ts_ls", "tailwindcss", "eslint", "clangd", "gopls", "asm_lsp" }
+
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
